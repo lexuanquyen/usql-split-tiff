@@ -104,8 +104,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ZipOutputter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TiffOutputter.cs" />
     <Compile Include="SplitTiff.cs" />
     <Compile Include="SplitTiffExtractor.cs" />
   </ItemGroup>

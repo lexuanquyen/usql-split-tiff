@@ -26,11 +26,9 @@ namespace SplitTiff
 
                 var tiffArray = SplitTiff.Split(memoryStream, _chunkWidth, _chunkHeight);
 
-                for (var i = 0; i < tiffArray.Count; i++)
+                foreach (var tiff in tiffArray)
                 {
-                    output.Set("chunkId", i);
-                    output.Set("tiff", tiffArray[i]);
-                    output.Set("size", tiffArray[i].Length);
+                    output.Set("tiff", tiff);
                     yield return output.AsReadOnly();
                 }
             }
