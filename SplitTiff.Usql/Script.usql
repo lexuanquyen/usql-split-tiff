@@ -8,7 +8,7 @@ DECLARE @out string = "/tiff_outputs/output.zip";
 @tiff_chunks =
     EXTRACT tiff byte[]
     FROM @in
-    USING new SplitTiff.SplitTiffExtractor(224, 224);
+    USING new SplitTiff.SplitTiffExtractor(1000, 1000);
 
 OUTPUT @tiff_chunks
 TO @out
